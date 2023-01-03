@@ -140,7 +140,11 @@ class ChatActivity : AppCompatActivity() {
 
             }
         }catch (e:java.lang.Exception) {
-            Toast.makeText(this@ChatActivity,e.message, Toast.LENGTH_SHORT).show()
+            runOnUiThread(Runnable {
+                kotlin.run {
+                    Toast.makeText(this@ChatActivity,e.message, Toast.LENGTH_SHORT).show()
+                }
+            })
         }
     }
 }

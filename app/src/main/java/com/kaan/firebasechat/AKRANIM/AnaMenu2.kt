@@ -10,8 +10,10 @@ import com.kaan.firebasechat.R
 import kotlinx.android.synthetic.main.fragment_ana_menu1.*
 import kotlinx.android.synthetic.main.fragment_ana_menu1.kulupButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.geriButton
+import kotlinx.android.synthetic.main.fragment_ana_menu1.ileriButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.locationButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.profileButton
+import kotlinx.android.synthetic.main.fragment_ana_menu2.*
 
 
 class AnaMenu2 : Fragment() {
@@ -54,6 +56,10 @@ class AnaMenu2 : Fragment() {
 
         kulupButton.setOnClickListener {
             val action=AnaMenu2Directions.actionAnaMenu2ToKulupTestinOlduguEkran()
+            Navigation.findNavController(it).navigate(action)
+        }
+        chatButton2.setOnClickListener {
+            val action=AnaMenu2Directions.actionAnaMenu2ToUsersActivity()
             Navigation.findNavController(it).navigate(action)
         }
 

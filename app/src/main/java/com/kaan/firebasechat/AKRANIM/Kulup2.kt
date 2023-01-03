@@ -47,6 +47,11 @@ class Kulup2 : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
+        chatButton6.setOnClickListener {
+            val action= Kulup2Directions.actionKulup2ToUsersActivity()
+            Navigation.findNavController(it).navigate(action)
+        }
+
     }
 
 }

@@ -23,23 +23,20 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         auth = FirebaseAuth.getInstance()
-        /*firebaseUser = auth.currentUser!!
+        //firebaseUser = auth.currentUser
 
         //check if user login then navigate to user screen
-        if (firebaseUser != null) {
-            val intent = Intent(this@LoginActivity, UsersActivity::class.java)
+        if (auth.currentUser != null) {
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }*/
+        }
 
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString()
             val password = etPassword.text.toString()
 
-            if (TextUtils.isEmpty(email) && TextUtils.isEmpty(password)) {
-                Toast.makeText(applicationContext, "email and password are required", Toast.LENGTH_SHORT).show()
-            }
-            else if (email == null || password == null) {
+            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(applicationContext, "email and password are required", Toast.LENGTH_SHORT).show()
             }
             else {

@@ -54,6 +54,10 @@ class AnaMenu1 : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
+        chatButton.setOnClickListener {
+            val action=AnaMenu1Directions.actionAnaMenu1ToUsersActivity()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
 }

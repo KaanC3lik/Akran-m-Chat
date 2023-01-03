@@ -49,7 +49,10 @@ class KuluplerSonucEkrani : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
-
+        chatButton7.setOnClickListener {
+            val action = KuluplerSonucEkraniDirections.actionKuluplerSonucEkraniToUsersActivity()
+            Navigation.findNavController(it).navigate(action)
+        }
 
     }
 

@@ -8,6 +8,21 @@
     android:background="@drawable/home"
     tools:context=".activity.LoginActivity">
 
+    <ImageButton
+        android:id="@+id/btnLogin2"
+        android:layout_width="111dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="#00000000"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:layout_constraintVertical_bias="0.576"
+        app:srcCompat="@drawable/rectangle_4"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="243dp"
@@ -58,7 +73,7 @@
         android:layout_marginBottom="168dp"
         android:ems="10"
         android:hint="Şifre:"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#331C1C"
         android:textSize="14sp"
@@ -69,17 +84,16 @@
 
     <ImageButton
         android:id="@+id/btnLogin"
-        android:layout_width="330dp"
-        android:layout_height="183dp"
+        android:layout_width="111dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="32dp"
         android:background="#00000000"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        app:layout_constraintVertical_bias="0.625"
+        app:layout_constraintVertical_bias="0.852"
         app:srcCompat="@drawable/rectangle_4"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -94,6 +108,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.79"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/girisText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GİRİŞ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
         tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

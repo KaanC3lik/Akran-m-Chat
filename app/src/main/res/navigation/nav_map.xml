@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_anaMenu1_to_kulup_Testin_oldugu_ekran"
             app:destination="@id/kulup_Testin_oldugu_ekran" />
+        <action
+            android:id="@+id/action_anaMenu1_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <fragment
         android:id="@+id/anaMenu2"
@@ -46,6 +49,9 @@
         <action
             android:id="@+id/action_anaMenu2_to_kulup_Testin_oldugu_ekran"
             app:destination="@id/kulup_Testin_oldugu_ekran" />
+        <action
+            android:id="@+id/action_anaMenu2_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <fragment
         android:id="@+id/anaMenu3"
@@ -67,6 +73,9 @@
         <action
             android:id="@+id/action_anaMenu3_to_kulup_Testin_oldugu_ekran"
             app:destination="@id/kulup_Testin_oldugu_ekran" />
+        <action
+            android:id="@+id/action_anaMenu3_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <fragment
         android:id="@+id/yeditepeHarita"
@@ -91,6 +100,9 @@
         <action
             android:id="@+id/action_profileFragment_to_kulup_Testin_oldugu_ekran"
             app:destination="@id/kulup_Testin_oldugu_ekran" />
+        <action
+            android:id="@+id/action_profileFragment_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <activity
         android:id="@+id/takvim"
@@ -132,6 +144,9 @@
         <action
             android:id="@+id/action_bilisimkulubu_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_bilisimkulubu_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <fragment
         android:id="@+id/kulup1"
@@ -153,6 +168,9 @@
         <action
             android:id="@+id/action_kulup1_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_kulup1_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <fragment
         android:id="@+id/kulup2"
@@ -171,6 +189,9 @@
         <action
             android:id="@+id/action_kulup2_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_kulup2_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
     <fragment
         android:id="@+id/kuluplerSonucEkrani"
@@ -189,5 +210,12 @@
         <action
             android:id="@+id/action_kuluplerSonucEkrani_to_bilisimkulubu"
             app:destination="@id/bilisimkulubu" />
+        <action
+            android:id="@+id/action_kuluplerSonucEkrani_to_usersActivity"
+            app:destination="@id/usersActivity" />
     </fragment>
+    <activity
+        android:id="@+id/usersActivity"
+        android:name="com.kaan.firebasechat.activity.UsersActivity"
+        android:label="UsersActivity" />
 </navigation>

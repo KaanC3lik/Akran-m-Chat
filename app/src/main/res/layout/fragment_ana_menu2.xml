@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".AnaMenu2">
+    tools:context=".AKRANIM.AnaMenu2">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -144,14 +144,14 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/chatButton2"
         android:layout_width="71dp"
         android:layout_height="65dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/livechat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 

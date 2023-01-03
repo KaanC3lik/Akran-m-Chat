@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".AKRANIM.ProfileFragment">
 
 
     <EditText
@@ -109,7 +109,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/chatButton8"
         android:layout_width="71dp"
         android:layout_height="65dp"
         android:layout_marginBottom="16dp"

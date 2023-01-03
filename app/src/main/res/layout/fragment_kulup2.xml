@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kulup2">
+    tools:context=".AKRANIM.Kulup2">
 
     <ImageView
         android:id="@+id/imageView36"
@@ -200,7 +200,7 @@
         app:layout_constraintVertical_bias="0.945" />
 
     <ImageButton
-        android:id="@+id/imageButton17"
+        android:id="@+id/chatButton6"
         android:layout_width="63dp"
         android:layout_height="54dp"
         android:src="@drawable/livechatt"

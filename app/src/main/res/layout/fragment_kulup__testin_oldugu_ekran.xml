@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kulup_Testin_oldugu_ekran">
+    tools:context=".AKRANIM.Kulup_Testin_oldugu_ekran">
 
 
     <ImageView

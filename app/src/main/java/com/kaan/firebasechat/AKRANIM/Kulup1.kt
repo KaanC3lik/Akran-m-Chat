@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.kaan.firebasechat.R
 import kotlinx.android.synthetic.main.fragment_kulup1.*
-import kotlinx.android.synthetic.main.fragment_kulup2.*
 
 class Kulup1 : Fragment() {
 
@@ -34,7 +33,7 @@ class Kulup1 : Fragment() {
         Navigation.findNavController(it).navigate(action)
     }
 
-        imageButton8.setOnClickListener {
+        clubBtn.setOnClickListener {
             val action = Kulup1Directions.actionKulup1ToKulupTestinOlduguEkran2()
             Navigation.findNavController(it).navigate(action)
         }
@@ -49,7 +48,10 @@ class Kulup1 : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
-
+        chatButton5.setOnClickListener {
+            val action= Kulup1Directions.actionKulup1ToUsersActivity()
+            Navigation.findNavController(it).navigate(action)
+        }
 
     }
 }

@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_ana_menu1.geriButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.locationButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.kulupButton
 import kotlinx.android.synthetic.main.fragment_ana_menu3.*
+import kotlinx.android.synthetic.main.fragment_kulupler_sonuc_ekrani.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
@@ -49,10 +50,10 @@ class ProfileFragment : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
-
-
-
-
+        chatButton8.setOnClickListener {
+            val action = ProfileFragmentDirections.actionProfileFragmentToUsersActivity()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
 }

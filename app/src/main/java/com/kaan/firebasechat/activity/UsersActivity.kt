@@ -4,28 +4,23 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.google.firebase.installations.FirebaseInstallations
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
 import com.kaan.firebasechat.adapter.UserAdapter
 import com.kaan.firebasechat.R
 import com.kaan.firebasechat.firebase.FirebaseService
 import com.kaan.firebasechat.model.User
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_users.*
 import kotlinx.android.synthetic.main.activity_users.imgBack
-import kotlinx.android.synthetic.main.item_user.*
-import kotlin.math.log
+
+
 
 
 class UsersActivity : AppCompatActivity() {
@@ -42,7 +37,7 @@ class UsersActivity : AppCompatActivity() {
         userRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL,false)
 
         imgBack.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
+            //FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }
 
