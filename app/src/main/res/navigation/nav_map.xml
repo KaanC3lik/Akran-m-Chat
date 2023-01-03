@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_anaMenu1_to_usersActivity"
             app:destination="@id/usersActivity" />
+        <action
+            android:id="@+id/action_anaMenu1_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/anaMenu2"
@@ -218,4 +221,9 @@
         android:id="@+id/usersActivity"
         android:name="com.kaan.firebasechat.activity.UsersActivity"
         android:label="UsersActivity" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.kaan.firebasechat.activity.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

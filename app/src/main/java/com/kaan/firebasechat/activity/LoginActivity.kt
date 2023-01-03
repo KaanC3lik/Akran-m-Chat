@@ -10,9 +10,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.kaan.firebasechat.AKRANIM.MainActivity
 import com.kaan.firebasechat.R
 import com.kaan.firebasechat.activity.SignUpActivity
-import kotlinx.android.synthetic.main.activity_login.btnLogin
-import kotlinx.android.synthetic.main.activity_login.etEmail
-import kotlinx.android.synthetic.main.activity_login.etPassword
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth:FirebaseAuth
@@ -56,10 +54,10 @@ class LoginActivity : AppCompatActivity() {
                     }
             }
         }
-        /*btnSignUp.setOnClickListener {
+        btnSignUp.setOnClickListener {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
             finish()
-        }*/
+        }
     }
 }

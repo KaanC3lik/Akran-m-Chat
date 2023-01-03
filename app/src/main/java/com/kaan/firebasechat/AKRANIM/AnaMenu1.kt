@@ -1,11 +1,13 @@
 package com.kaan.firebasechat.AKRANIM
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.google.firebase.auth.FirebaseAuth
 import com.kaan.firebasechat.R
 import kotlinx.android.synthetic.main.fragment_ana_menu1.*
 
@@ -29,6 +31,11 @@ class AnaMenu1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        geriButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val action=AnaMenu1Directions.actionAnaMenu1ToLoginActivity()
+            Navigation.findNavController(it).navigate(action)
+        }
         ileriButton.setOnClickListener {
             val action=AnaMenu1Directions.actionAnaMenu1ToAnaMenu2()
             Navigation.findNavController(it).navigate(action)

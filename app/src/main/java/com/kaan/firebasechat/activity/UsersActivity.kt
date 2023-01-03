@@ -41,11 +41,6 @@ class UsersActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        profileImage.setOnClickListener{
-            val intent = Intent(this@UsersActivity, ProfileActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
         getUserList()
     }
 
@@ -67,12 +62,7 @@ class UsersActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userList.clear()
                 val currentUser = snapshot.getValue(User::class.java)
-                if (currentUser!!.userImage == "") {
-                    profileImage.setImageResource(R.drawable.profile_image)
-                }
-                else {
-                    Glide.with(this@UsersActivity).load(currentUser.userImage).into(profileImage)
-                }
+
 
                 for (Ds in snapshot.children) {
                     val user = Ds.getValue(User::class.java)
@@ -82,7 +72,7 @@ class UsersActivity : AppCompatActivity() {
 
 
                     if (!user!!.userId.equals(firebase.uid)) {
-                        userList.add(User( "${id}", "${name}", "${profileImage}"))
+                        userList.add(User( "${id}", "${name}", "${profileImg}"))
                     }
                 }
 

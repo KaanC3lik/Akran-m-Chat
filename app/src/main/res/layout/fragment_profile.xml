@@ -9,10 +9,10 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="445dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="304dp"
+        android:id="@+id/departmentAndSection"
+        android:layout_width="412dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="272dp"
         android:background="@null"
         android:ems="10"
         android:inputType="textPersonName"
@@ -126,12 +126,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:src="@drawable/frame_3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toEndOf="@+id/profileUserName"
+        app:layout_constraintStart_toStartOf="@+id/profileUserName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/profileUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -149,7 +149,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/durum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="384dp"
@@ -167,7 +167,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/dahilOlunanKulüpler"
         android:layout_width="410dp"
         android:layout_height="44dp"
         android:layout_marginTop="520dp"
@@ -185,7 +185,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/ögrenciNumarasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="420dp"
@@ -203,7 +203,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/kullanıcıMail"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginTop="480dp"
@@ -221,7 +221,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/dönem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="456dp"

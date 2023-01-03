@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.kaan.firebasechat.AKRANIM.MainActivity
 import com.kaan.firebasechat.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.activity_sign_up.btnLogin
@@ -28,6 +29,9 @@ class SignUpActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         btnSignUp.setOnClickListener {
             val userName = etName.text.toString()
+            val schoolId = schoolID.text.toString()
+            val department = department.text.toString()
+            val section = section.text.toString()
             val email = etEmail.text.toString()
             val password = etPassword.text.toString()
             val confirmPassword = etConfirmPassword.text.toString()
@@ -47,7 +51,7 @@ class SignUpActivity : AppCompatActivity() {
             if (password.equals(confirmPassword).not()) {
                 Toast.makeText(applicationContext, "confirmPassword is not match", Toast.LENGTH_SHORT).show()
             }
-            registerUser(userName, email, password)
+            registerUser(userName, email, password, schoolId, department, section)
         }
 
         btnLogin.setOnClickListener {
@@ -58,7 +62,7 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
-    private fun registerUser(userName:String, email:String, password:String) {
+    private fun registerUser(userName:String, email:String, password:String, schoolId:String, department:String, section:String,) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
@@ -70,6 +74,9 @@ class SignUpActivity : AppCompatActivity() {
                     val hashMap:HashMap<String,String> = HashMap()
                     hashMap.put("userId", userId)
                     hashMap.put("username", userName)
+                    hashMap.put("schoolId", schoolId)
+                    hashMap.put("department", department)
+                    hashMap.put("section", section)
                     hashMap.put("progileImage", "")
 
                     databaseReference.setValue(hashMap).addOnCompleteListener(this){
@@ -79,7 +86,7 @@ class SignUpActivity : AppCompatActivity() {
                             etEmail.setText("")
                             etPassword.setText("")
                             etConfirmPassword.setText("")
-                            val intent = Intent(this@SignUpActivity, UsersActivity::class.java)
+                            val intent = Intent(this@SignUpActivity, MainActivity::class.java)
                             startActivity(intent)
                             finish()
                         }

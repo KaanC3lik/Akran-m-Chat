@@ -1,23 +1,15 @@
 package com.kaan.firebasechat.adapter
 
 import android.content.Context
-import android.content.Intent
-import android.media.Image
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.kaan.firebasechat.R
-import com.kaan.firebasechat.activity.ChatActivity
-import com.kaan.firebasechat.activity.ProfileActivity
 import com.kaan.firebasechat.model.Chat
-import com.kaan.firebasechat.model.User
 import de.hdodenhof.circleimageview.CircleImageView
 
 class ChatAdapter(private val context: Context, private val chatList: ArrayList<Chat>) :
