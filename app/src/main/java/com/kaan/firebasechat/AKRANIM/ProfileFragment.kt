@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_ana_menu1.geriButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.locationButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.kulupButton
 import kotlinx.android.synthetic.main.fragment_ana_menu3.*
-import kotlinx.android.synthetic.main.fragment_kulupler_sonuc_ekrani.*
+
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
@@ -36,21 +36,24 @@ class ProfileFragment : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val currentUserName = snapshot.child("username").value.toString()
                 val curentdepartment = snapshot.child("department").value.toString()
-                val curentsection = snapshot.child("section").value.toString()
-                val curentschoolId = snapshot.child("schoolId").value.toString()
+                val currentsection = snapshot.child("section").value.toString()
+                val currentschoolId = snapshot.child("schoolId").value.toString()
                 val currentUserProfileImg = snapshot.child("progileImg").value.toString()
                 val currenClub = snapshot.child("Kulüpler").value.toString()
                 val currenEmail = snapshot.child("e-mail").value.toString()
                 val currentDurum = snapshot.child("Durum").value.toString()
                 val currentDönem =snapshot.child("dönem").value.toString()
+                val AKRANIM =snapshot.child("Akranım").value.toString()
 
                 profileUserName.setText(currentUserName)
-                departmentAndSection.setText("Fakülte:${curentdepartment} \nBölümü: ${curentsection}")
-                dahilOlunanKulüpler.setText(currenClub)
-                kullanıcıMail.setText(currenEmail)
-                ögrenciNumarasi.setText(curentschoolId)
-                durum.setText(currentDurum)
-                dönem.setText(currentDönem)
+                DEPARTMENT.setText("Fakültem: ${curentdepartment}")
+                SECTION.setText("Bölümüm: ${currentsection}")
+                dahilOlunanKulüpler.setText("Kulüpler: ${currenClub}")
+                kullanıcıMail.setText("E-mail: ${currenEmail}")
+                ögrenciNumarasi.setText("Okul Numarası: ${currentschoolId}")
+                durum.setText("Durum: ${currentDurum}")
+                dönem.setText("Dönem: ${currentDönem}")
+                akranım.setText("Akranım: ${AKRANIM}")
 
                 Log.e("username", "onDataChange: ${currentUserName}", )
                 Log.e("profileImg", "onDataChange: ${currentUserProfileImg}", )

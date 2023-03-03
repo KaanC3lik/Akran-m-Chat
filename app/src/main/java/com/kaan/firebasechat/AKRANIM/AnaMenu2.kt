@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.fragment_ana_menu1.geriButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.ileriButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.locationButton
 import kotlinx.android.synthetic.main.fragment_ana_menu1.profileButton
+import kotlinx.android.synthetic.main.fragment_ana_menu1.takvimButton
 import kotlinx.android.synthetic.main.fragment_ana_menu2.*
 
 
@@ -63,6 +64,10 @@ class AnaMenu2 : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
+        takvimButton.setOnClickListener {
+            val action=AnaMenu2Directions.actionAnaMenu2ToTakvim()
+            Navigation.findNavController(it).navigate(action)
+        }
 
     }
 

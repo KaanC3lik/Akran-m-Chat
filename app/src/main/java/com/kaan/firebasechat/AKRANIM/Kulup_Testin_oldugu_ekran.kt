@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.kaan.firebasechat.R
 import kotlinx.android.synthetic.main.fragment_kulup__testin_oldugu_ekran.*
-import kotlinx.android.synthetic.main.fragment_kulupler_sonuc_ekrani.*
+
 
 
 class Kulup_Testin_oldugu_ekran : Fragment() {
@@ -47,6 +47,10 @@ class Kulup_Testin_oldugu_ekran : Fragment() {
 
         imageButton37.setOnClickListener {
             val action = Kulup_Testin_oldugu_ekranDirections.actionKulupTestinOlduguEkranToAnaMenu1()
+            Navigation.findNavController(it).navigate(action)
+        }
+        btnAnket.setOnClickListener {
+            val action = Kulup_Testin_oldugu_ekranDirections.kulupAnket()
             Navigation.findNavController(it).navigate(action)
         }
 

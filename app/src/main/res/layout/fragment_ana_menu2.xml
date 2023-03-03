@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        android:background="@color/C7F5F9"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -46,6 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        android:background="@color/C7F5F9"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
@@ -117,6 +119,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.651"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -129,6 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -141,6 +145,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -151,8 +156,9 @@
         android:src="@drawable/livechat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintHorizontal_bias="0.361"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -165,6 +171,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,6 +53,7 @@ class UsersActivity : AppCompatActivity() {
         val firebaseDatabase = FirebaseDatabase.getInstance()
         val databaseReference: DatabaseReference = firebaseDatabase.getReference("Users")
 
+
         databaseReference.addValueEventListener(object :ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(applicationContext,error.message,Toast.LENGTH_SHORT).show()
@@ -69,14 +70,15 @@ class UsersActivity : AppCompatActivity() {
                     val id = Ds.key
                     val name = Ds.child("username").value.toString()
                     val profileImg = Ds.child("progileImage").value.toString()
+                    val myAKRANIM = Ds.child("Akranım").value.toString()
 
 
                     if (!user!!.userId.equals(firebase.uid)) {
-                        userList.add(User( "${id}", "${name}", "${profileImg}"))
+                        userList.add(User( "${id}", "${name}", "${profileImg}", "${myAKRANIM}"))
                     }
                 }
-
-                val useradapter = UserAdapter(this@UsersActivity,userList)
+                val currentUserAkran = snapshot.child(firebase.uid).child("Akranım").value.toString()
+                val useradapter = UserAdapter(this@UsersActivity,userList,currentUserAkran)
 
                 userRecyclerView.adapter = useradapter
 

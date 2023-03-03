@@ -145,6 +145,7 @@
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/F3F8C0"
         app:layout_constraintVertical_bias="0.965" />
 
     <ImageButton
@@ -157,6 +158,7 @@
         app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/F6D3F6"
         app:layout_constraintVertical_bias="0.965" />
 
     <ImageButton
@@ -169,6 +171,7 @@
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/CAF0C8"
         app:layout_constraintVertical_bias="0.965" />
 
     <ImageButton
@@ -181,6 +184,7 @@
         app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/C7F5F9"
         app:layout_constraintVertical_bias="0.97" />
 
     <ImageView

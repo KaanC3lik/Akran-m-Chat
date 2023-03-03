@@ -36,22 +36,21 @@ class SignUpActivity : AppCompatActivity() {
             val password = etPassword.text.toString()
             val confirmPassword = etConfirmPassword.text.toString()
 
-            if (TextUtils.isEmpty(userName)) {
-                Toast.makeText(applicationContext, "username is required", Toast.LENGTH_SHORT).show()
+            if (TextUtils.isEmpty(userName) ||
+                TextUtils.isEmpty(schoolId) ||
+                TextUtils.isEmpty(department) ||
+                TextUtils.isEmpty(section) ||
+                TextUtils.isEmpty(email) ||
+                TextUtils.isEmpty(password)
+                ) {
+                Toast.makeText(applicationContext, "Lütfen bilgilerinizi doğru giriniz", Toast.LENGTH_SHORT).show()
+            }else if (TextUtils.isEmpty(confirmPassword) ||
+                password.equals(confirmPassword).not()) {
+                Toast.makeText(applicationContext, "Şifreniz uyuşmuyor", Toast.LENGTH_SHORT).show()
             }
-            if (TextUtils.isEmpty(email)) {
-                Toast.makeText(applicationContext, "email is required", Toast.LENGTH_SHORT).show()
+            else {
+                registerUser(userName, email, password, schoolId, department, section)
             }
-            if (TextUtils.isEmpty(password)) {
-                Toast.makeText(applicationContext, "password is required", Toast.LENGTH_SHORT).show()
-            }
-            if (TextUtils.isEmpty(confirmPassword)) {
-                Toast.makeText(applicationContext, "confirmPassword is required", Toast.LENGTH_SHORT).show()
-            }
-            if (password.equals(confirmPassword).not()) {
-                Toast.makeText(applicationContext, "confirmPassword is not match", Toast.LENGTH_SHORT).show()
-            }
-            registerUser(userName, email, password, schoolId, department, section)
         }
 
         btnLogin.setOnClickListener {

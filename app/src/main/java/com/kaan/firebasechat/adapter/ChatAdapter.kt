@@ -1,6 +1,7 @@
 package com.kaan.firebasechat.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,11 +46,11 @@ class ChatAdapter(private val context: Context, private val chatList: ArrayList<
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val txtUserName:TextView = view.findViewById(R.id.tvMessage)
-        val imgUser:CircleImageView = view.findViewById(R.id.userImage)
     }
 
     override fun getItemViewType(position: Int): Int {
         firebaseUser =FirebaseAuth.getInstance().currentUser
+        Log.e("chatList", "getItemViewType: ${chatList}", )
         if (chatList[position].senderId == firebaseUser!!.uid){
             return MESSAGE_TYPE_RIGHT
         }

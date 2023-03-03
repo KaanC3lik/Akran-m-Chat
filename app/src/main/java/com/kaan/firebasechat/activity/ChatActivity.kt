@@ -49,15 +49,16 @@ class ChatActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val currentUserName = snapshot.child("username").value.toString()
                 val currentUserProfileImg = snapshot.child("progileImg").value.toString()
+                val currenUserAKRANIM = snapshot.child("Akranım").value.toString()
 
                 tvUserName.setText(currentUserName)
                 Log.e("username", "onDataChange: ${currentUserName}", )
                 Log.e("profileImg", "onDataChange: ${currentUserProfileImg}", )
-                if (currentUserProfileImg == "null") {
-                    imgProfile.setImageResource(R.drawable.profile_image)
+                if (currentUserName == currenUserAKRANIM) {
+                    imgProfile.setImageResource(R.drawable.danismanprofile)
                 }
                 else {
-                    Glide.with(this@ChatActivity).load(currentUserProfileImg).into(imgProfile)
+                    imgProfile.setImageResource(R.drawable.profile_image)
                 }
             }
 
@@ -112,9 +113,11 @@ class ChatActivity : AppCompatActivity() {
                     val message = Ds.child("message").value.toString()
                     val receiverIdControl = Ds.child("receiverId").value.toString()
                     val senderIdControl = Ds.child("senderId").value.toString()
-
+                    Log.e("message", "onDataChange: ${message}", )
+                    Log.e("senderIdControl", "onDataChange: ${senderIdControl}", )
+                    Log.e("receiverIdControl", "onDataChange: ${receiverIdControl}", )
                     if (chat!!.senderId.equals(senderId) && chat!!.receiverId.equals(receiverId) ||
-                        chat!!.senderId.equals(senderId) && chat!!.receiverId.equals(receiverId)) {
+                        chat!!.senderId.equals(receiverId) && chat!!.receiverId.equals(senderId)) {
                         chatList.add(Chat( "$senderIdControl", "$receiverIdControl", "${message}"))
                     }
                 }

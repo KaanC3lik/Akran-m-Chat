@@ -2,6 +2,7 @@ package com.kaan.firebasechat.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ import com.kaan.firebasechat.activity.ChatActivity
 import com.kaan.firebasechat.model.User
 import de.hdodenhof.circleimageview.CircleImageView
 
-class UserAdapter(private val context: Context, private val userList: ArrayList<User>) :
+class UserAdapter(private val context: Context, private val userList: ArrayList<User>, val currentUserAkran: String) :
     RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
 
@@ -29,15 +30,27 @@ class UserAdapter(private val context: Context, private val userList: ArrayList<
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = userList[position]
-        holder.txtUserName.text = user.userName
-        Glide.with(context).load(user.userImage).placeholder(R.drawable.profile_image).into(holder.imgUser)
+        Log.e("user.userAkran", "onBindViewHolder: ${user.userAkran}")
+        Log.e("currentUserAkran", "onBindViewHolder: ${currentUserAkran}", )
 
-        holder.layoutUser.setOnClickListener {
-            val intent = Intent(context, ChatActivity::class.java)
-            intent.putExtra("userId", user.userId)
-            intent.putExtra("userName", user.userName)
-            context.startActivity(intent)
+        if (user.userAkran == currentUserAkran && user.userAkran !== "null" && currentUserAkran !== "null" ) {
+            holder.txtUserName.text = user.userName
+            if (user.userName == currentUserAkran) {
+                Glide.with(context).load(user.userImage).placeholder(R.drawable.danismanprofile)
+                    .into(holder.imgUser)
+            }else {
+                Glide.with(context).load(user.userImage).placeholder(R.drawable.profile_image)
+                    .into(holder.imgUser)
+            }
+
+            holder.layoutUser.setOnClickListener {
+                val intent = Intent(context, ChatActivity::class.java)
+                intent.putExtra("userId", user.userId)
+                intent.putExtra("userName", user.userName)
+                context.startActivity(intent)
+            }
         }
+
         //val intent = Intent(this@UsersActivity, ProfileActivity::class.java)
         //startActivity(intent)
         //finish()

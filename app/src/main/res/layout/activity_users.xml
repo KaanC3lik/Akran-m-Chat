@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark"
     android:orientation="vertical">
 
 
@@ -28,10 +29,9 @@
             android:layout_weight="2"
             android:fontFamily="@font/gilroy_bold"
             android:text="Akranlarım"
+            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
-
-
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_anaMenu2_to_usersActivity"
             app:destination="@id/usersActivity" />
+        <action
+            android:id="@+id/action_anaMenu2_to_takvim"
+            app:destination="@id/takvim" />
     </fragment>
     <fragment
         android:id="@+id/anaMenu3"
@@ -129,6 +132,9 @@
         <action
             android:id="@+id/action_kulup_Testin_oldugu_ekran_to_anaMenu1"
             app:destination="@id/anaMenu1" />
+        <action
+            android:id="@+id/kulupAnket"
+            app:destination="@id/kulupTesti" />
     </fragment>
     <fragment
         android:id="@+id/bilisimkulubu"
@@ -226,4 +232,9 @@
         android:name="com.kaan.firebasechat.activity.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/kulupTesti"
+        android:name="com.kaan.firebasechat.AKRANIM.kulupTesti"
+        android:label="activity_kulup_testi"
+        tools:layout="@layout/activity_kulup_testi" />
 </navigation>

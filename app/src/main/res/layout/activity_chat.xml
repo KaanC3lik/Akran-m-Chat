@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/dark"
     android:layout_height="match_parent">
 
 
@@ -30,6 +31,7 @@
             android:fontFamily="@font/gilroy_bold"
             android:text=""
             android:textSize="15sp"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -67,7 +69,7 @@
                 android:fontFamily="@font/gilroy_light"
                 android:layout_weight="1"
                 android:inputType="text"
-                android:background="@color/colorTextBackground"
+                android:background="@color/chatBg"
                 android:hint="@string/type_message"
                 android:padding="12dp"
                 android:textColor="@color/colorText" />
@@ -82,7 +84,6 @@
                 android:text="@string/btn_sign_up"/>
 
         </LinearLayout>
-
 
     </RelativeLayout>
 

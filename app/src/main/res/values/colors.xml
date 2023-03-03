@@ -6,7 +6,7 @@
     <color name="colorText">#464646</color>
     <color name="colorDarkGray">#464646</color>
     <color name="colorTextBackground">#f5f5f5</color>
-    <color name="colorItemLeft">#A8AC7D</color>
+    <color name="colorItemLeft">#E9F6D3</color>
     <color name="colorItemRight">#F6D3F6</color>
     <color name="colorWhite">#fff</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -16,4 +16,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="F6D3F6">#F6D3F6</color>
+    <color name="F3F8C0">#F3F8C0</color>
+    <color name="C7F5F9">#C7F5F9</color>
+    <color name="CAF0C8">#CAF0C8</color>
+    <color name="dark">#1E1E1E</color>
+    <color name="recyleBg">#2B2A2A</color>
+    <color name="chatBg">#D1D5DB</color>
 </resources>

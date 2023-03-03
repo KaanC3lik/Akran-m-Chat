@@ -8,6 +8,17 @@
     android:orientation="vertical">
 
 
+    <TextView
+        android:id="@+id/girisText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="11dp"
+        android:text="Kayıt ol"
+        app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+        app:layout_constraintTop_toTopOf="@+id/btnSignUp"
+        tools:ignore="TextContrastCheck" />
+
     <EditText
         android:id="@+id/section"
         android:layout_width="match_parent"
@@ -121,7 +132,7 @@
 
 
     <ImageButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignUp"
         android:layout_width="111dp"
         android:layout_height="50dp"
         android:layout_marginBottom="180dp"
@@ -134,19 +145,10 @@
         app:srcCompat="@drawable/rectangle_4"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/girisText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
-        android:text="Kayıt ol"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin"
-        app:layout_constraintTop_toTopOf="@+id/btnLogin"
-        tools:ignore="TextContrastCheck" />
+
 
     <ImageButton
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnLogin"
         android:layout_width="111dp"
         android:layout_height="50dp"
         android:layout_marginBottom="184dp"
@@ -165,10 +167,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="11dp"
-        android:text="Giriş yap"
+        android:text="Kayıt ol"
         app:layout_constraintStart_toStartOf="@+id/btnSignUp"
         app:layout_constraintTop_toTopOf="@+id/btnSignUp"
         tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="Girişe dön"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
